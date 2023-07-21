@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormCurso</title>
+    <script>
+
+        vetor = [];
+
+        function cadastrar(){
+            var curso = [];
+            curso["nome"] = document.getElementById("nome").value;
+            curso["valor"] = Number(document.getElementById("valor").value);
+            
+            if(curso["nome"] == "" || curso["valor"] == ""){
+                alert("Preencha todos os campos!");
+            } else {
+                vetor.push(curso);
+                alert(curso.nome + " foi cadastrado.");
+                listar();
+                limpar();
+            }
+        }
+
+        function listar(){
+            var saida = cabecalho();
+            
+            for(var i = 0; i < vetor.length; i++){
+                saida += inserirLinha(vetor[i], i);
+            }
+
+            document.getElementById("tabela").innerHTML = saida;
+        }
+
+        function limpar(){
+            var elementos = document.getElementsByTagName("input");
+
+            for(var i = 0; i < 2; i++){
+                elementos[i].value = "";
+            }
+        }
+
+        function cabecalho(){
+            var str = "<tr>";
+            str += "<td>Nome</td>";
+            str += "<td>Valor</td>";
+            str += "</tr>";
+
+            return str;
+        }
+
+        function inserirLinha(objeto, p){
+            var str = "<tr>";
+            str += "<td>"+ objeto.nome +"</td>";
+            str += "<td>"+ formatarValor(objeto.valor) +"</td>";
+            str += "</tr>";
+            return str;
+        }
+
+        function formatarValor(sal){
+            var s = sal.toFixed(2);
+            return s.replace(".",",");
+        }
+
+        function redirecionar(){
+            window.location.href="Cursos.html";
+        }
+
+    </script>
+</head>
+<body>
+    
+    <form>
+
+        <input type="text" id="nome" placeholder="Nome do curso"/>
+        <input type="number" id="valor" placeholder="Valor do Curso"/>
+        <input type="button" id="cadastro" value="Cadastrar" onclick="cadastrar()"/>
+        <input type="button" id="voltar" value="Voltar" onclick="redirecionar()"/>
+
+    </form>
+    <table id="tabela" border="2">  
+    </table>
+    
+</body>
+</html>
