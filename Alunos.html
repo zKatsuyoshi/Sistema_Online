@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+    <link href="css/Estilos.css" rel="stylesheet"/>
     <title>Alunos</title>
     <script>
 
@@ -14,18 +16,68 @@
 </head>
 <body>
 
-    <h1>Turmas</h1>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html">ConCursos</a>
+            <button class="navbar-toggler" type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="Alunos.html">Alunos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Cursos.html">Cursos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Professores.html">Professores</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="Turmas.html">Turmas</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <form>
-        <thead>
-            <tr class="cabecalho">
-                <td>Nome do Aluno</td>
-                <td>E-mail do Aluno</td>
-                <td>Tel. do Aluno</td>
-            </tr>
-        </thead>
+    <div class="container">
+        <h1>Alunos</h1>
+        <form>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Nome do Aluno</th>
+                        <th scope="col">E-mail do Aluno</th>
+                        <th scope="col">Tel. do Aluno</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pedro Uruguai</td>
+                        <td>pedro.uruguai@email.com</td>
+                        <td>(11) 99123-4567</td>
+                    </tr>
+                    <tr>
+                        <td>Rodrigo Limão</td>
+                        <td>rodrigo.limao@email.com</td>
+                        <td>(12) 99123-4567</td>
+                    </tr>
+                    <tr>
+                        <td>Gabriel Habibs</td>
+                        <td>gabriel.habibs@email.com</td>
+                        <td>(13) 99123-4567</td>
+                    </tr>
+                </tbody>
+            </table>
         <input type="button" id="NovoAluno" value="Novo Aluno" onclick="redirecionar()"/>
-    </form>
+        </form>
+    </div>
     
 </body>
 </html>
@@ -33,4 +85,5 @@
 <body>
     
 </body>
+<script src="js/bootstrap.js"></script>
 </html>
