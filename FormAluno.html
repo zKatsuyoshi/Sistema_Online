@@ -8,7 +8,35 @@
     <title>FormAluno</title>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <a href="Alunos.html">Voltar</a>
+            </div>
+        </div>
+    </nav>
     
+    <div class="container">
+        <form action="" method="get">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do Aluno</label>
+                <input type="text" id="nome" name="nome" required="true" maxlenght="20" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail do Aluno</label>
+                <input type="email" id="email" name="email" required="true" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Tel. do Aluno</label>
+                <input type="number" id="telefone" name="telefone" required="true" class="form-control"/>
+            </div>
+            <div class="mb-3">
+                <input type="submit" value="Confirmar" class="btn btn-verde"/>
+                <input type="reset" value="Limpar" class="btn btn-azul"/>
+            </div>
+        </form>
+    </div>
     
 </body>
 <script src="js/bootstrap.js"></script>

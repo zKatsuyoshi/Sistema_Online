@@ -1,9 +1,9 @@
-html, body {
+html, body{
     margin: 0;
     padding: 0;
 }
 
-a {
+a{
     font-family: tahoma, verdana, sans-serif;
     color: #1b9e38;
     text-decoration: none;
@@ -12,4 +12,23 @@ a {
 
 .nav-link, .navbar-brand{
     color:#1b9e38 !important;
+}
+
+.btn-verde{
+    background-color:green !important;
+    color:white !important;
+    border-color:darkgreen !important;
+}
+
+.btn-azul{
+    background-color:blue !important;
+    color:white !important;
+    border-color:darkblue !important;
+}
+
+.btn-ciano{
+    background-color:cyan !important;
+    color:black !important;
+    border-color:darkcyan !important;
+    background-size:auto;
 }
